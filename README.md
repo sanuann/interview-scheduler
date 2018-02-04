@@ -63,14 +63,12 @@ Then you can run `python manage.py createsuperuser` to create a superuser.
 You'll be prompted to create a username, provide an email address, and set up a password. You can choose whatever is convenient for you.
 
 After you create the superuser, if you navigate to the `/admin` path in the application, you should be able to log in as the superuser
-you created and add items to the database through Django's GUI. This will help you test your implementation. Again, if the admin console
-doesn't work for some reason and `manage.py` reports that you successfully created the superuser, let us know and we'll try to get things
-sorted as soon as we can.
+you created and add items to the database through Django's GUI. This will help you test your implementation.
 
 
 ## Class Documentation
 
-There are four major important classes in this project's code that you should be concerned with:
+There are four major important classes in this project's code:
 `InterviewSlot`, `InterviewCalender`, `Interview`, and `InterviewConflict`.
 
 ### InterviewSlot
