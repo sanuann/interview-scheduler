@@ -19,38 +19,7 @@ the container to start correctly.
 
 If you don't already have Docker on your machine, Docker provides an [installation guide](https://docs.docker.com/engine/installation/).
 
-Note that if you're running Windows or MacOS X, you'll need to use `docker-machine` to set up a virtual environment
-that your containers can run in.
-
-### Troubleshooting Port Conflicts
-
-You may run into a problem if you already have applications using port 8000 (for the web server) or port 5432 (for the Postgres instance).
-
-In this case, you can modify the `docker-compose.yml` file to change the port mappings on the host machine.
-
-On lines 8 and 21, you will see lines formatted as
-```
-      - '<host_machine_port>:<docker_machine_port>'
-```
-
-This maps a port on the Docker virtual machine to an actual port on the host machine.
-
-If you are encountering a conflict on port 5432, for example, line 8 currently reads
-```
-      - '5432:5432'
-```
-
-You can change the port on the left side of the colon to remap to a port which is actually available on
-your machine, for example:
-```
-      - '5435:5432'
-```
-
-Which will resolve the conflict.
-
-Be aware that if you remap the web server from port 8000 on the host machine, all of the web addresses
-you use to access the admin console, etc. will need to use the new host port number.
-
+If you're running Windows or MacOS X, you'll need to use `docker-machine` to set up a virtual environment that your containers can run in.
 
 ### Setting up a Superuser
 
@@ -68,7 +37,7 @@ you created and add items to the database through Django's GUI. This will help y
 
 ## Class Documentation
 
-There are four major important classes in this project's code:
+There are four major important classes in this project:
 `InterviewSlot`, `InterviewCalender`, `Interview`, and `InterviewConflict`.
 
 ### InterviewSlot
